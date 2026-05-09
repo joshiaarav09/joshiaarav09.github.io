@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aarav Joshi — AI/ML Engineer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" >
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="nav">
+    <a href="#hero" class="logo">Aarav<span></span></a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div>
+      <div class="hero-label">AI / ML Engineer</div>
+      <h1 class="hero-name">Aarav <em>Joshi.</em></h1>
+      <div class="hero-line"></div>
+      <p class="hero-desc">Building intelligent systems from research to production. MTech AI student at Kathmandu University.</p>
+      <div class="hero-btns">
+        <a href="#projects" class="btn btn-solid">View Work</a>
+        <a href="#contact" class="btn btn-ghost">Contact</a>
+      </div>
+    </div>
+    <div class="hero-photo">
+      <!-- Replace src below with your photo path e.g. "photo.jpg" -->
+      <img src="image.png" alt="Aarav Joshi" onerror="this.outerHTML='<div class=&quot;photo-fallback&quot;>AJ</div>'" />
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <p class="label reveal">About</p>
+    <h2 class="big-title reveal">Who <em>I am.</em></h2>
+    <div class="about-quote reveal">
+      "At the intersection of <em>deep learning research</em> and practical engineering — building systems that actually run in production."
+    </div>
+    <div class="stats reveal">
+      <div class="stat">
+        <div class="stat-num" data-target="6">0</div>
+        <div class="stat-lbl">Projects+</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">MTech</div>
+        <div class="stat-lbl">AI · KU</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">NPL</div>
+        <div class="stat-lbl">Bhaktapur</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <p class="label reveal">Selected Work</p>
+    <h2 class="big-title reveal">Projects.</h2>
+    <div class="proj-grid">
+
+      <div class="proj-card reveal" onclick="toggle(this)">
+        <div class="proj-head">
+          <div class="proj-num">01</div>
+          <div class="chevron">⌄</div>
+        </div>
+        <div class="proj-tags">
+          <span class="proj-tag">Thesis</span>
+          <span class="proj-tag">CV</span>
+          <span class="proj-tag">CTC</span>
+        </div>
+        <div class="proj-title">OsthaVaani</div>
+        <p class="proj-desc">Nepali lip reading using MediaPipe + LipNet-style CTC model with attention.</p>
+        <div class="proj-detail">
+          <div class="proj-detail-inner">
+            <div class="proj-detail-label">How it works</div>
+            <div class="proj-detail-text">Video collection and labeling for Nepali speech samples. MediaPipe for lip ROI extraction. LipNet-style CTC model with attention and beam search decoding. Evaluated on CER and WER metrics. MTech thesis project — first lip reading system targeting the Nepali language.</div>
+          </div>
+        </div>
+        <div class="proj-links" onclick="event.stopPropagation()">
+          <a href="#" class="proj-link" target="_blank">GitHub →</a>
+          <a href="#" class="proj-link" target="_blank">Demo →</a>
+        </div>
+      </div>
+
+      <div class="proj-card reveal" onclick="toggle(this)">
+        <div class="proj-head">
+          <div class="proj-num">02</div>
+          <div class="chevron">⌄</div>
+        </div>
+        <div class="proj-tags">
+          <span class="proj-tag">LSTM</span>
+          <span class="proj-tag">Streamlit</span>
+        </div>
+        <div class="proj-title">Air Pollution Prediction</div>
+        <p class="proj-desc">Ward-level AQI & PM2.5 forecasting for Kathmandu using LSTM. R² = 0.672.</p>
+        <div class="proj-detail">
+          <div class="proj-detail-inner">
+            <div class="proj-detail-label">How it works</div>
+            <div class="proj-detail-text">Sourced and integrated open datasets from PurpleAir, OpenMeteostat, and Meteostat for real-time forecasting. Applied data preprocessing, feature engineering, and model evaluation. LSTM trained for ward-level temporal prediction. Deployed via Streamlit for accessible public use.</div>
+          </div>
+        </div>
+        <div class="proj-links" onclick="event.stopPropagation()">
+          <a href="#" class="proj-link" target="_blank">GitHub →</a>
+          <a href="#" class="proj-link" target="_blank">Demo →</a>
+        </div>
+      </div>
+
+      <div class="proj-card reveal" onclick="toggle(this)">
+        <div class="proj-head">
+          <div class="proj-num">03</div>
+          <div class="chevron">⌄</div>
+        </div>
+        <div class="proj-tags">
+          <span class="proj-tag">RAG</span>
+          <span class="proj-tag">LangChain</span>
+        </div>
+        <div class="proj-title">PDF RAG Chatbot</div>
+        <p class="proj-desc">PDF QA chatbot using Python + LangChain + RAG techniques.</p>
+        <div class="proj-detail">
+          <div class="proj-detail-inner">
+            <div class="proj-detail-label">How it works</div>
+            <div class="proj-detail-text">Built with Python and LangChain to extract and retrieve answers from PDF files. Automated unstructured document parsing, embedding generation, and retrieval-based question answering. Demonstrates application of NLP and Retrieval-Augmented Generation in real-world use cases.</div>
+          </div>
+        </div>
+        <div class="proj-links" onclick="event.stopPropagation()">
+          <a href="#" class="proj-link" target="_blank">GitHub →</a>
+          <a href="#" class="proj-link" target="_blank">Demo →</a>
+        </div>
+      </div>
+
+      <div class="proj-card reveal" onclick="toggle(this)">
+        <div class="proj-head">
+          <div class="proj-num">04</div>
+          <div class="chevron">⌄</div>
+        </div>
+        <div class="proj-tags">
+          <span class="proj-tag">OpenCV</span>
+          <span class="proj-tag">SQLite</span>
+        </div>
+        <div class="proj-title">Facial Attendance System</div>
+        <p class="proj-desc">Real-time facial recognition attendance with Tkinter GUI.</p>
+        <div class="proj-detail">
+          <div class="proj-detail-inner">
+            <div class="proj-detail-label">How it works</div>
+            <div class="proj-detail-text">Developed real-time facial recognition using Python and OpenCV. Processed and stored structured attendance records efficiently in a SQLite database. Designed a Tkinter GUI for user-friendly interaction and data management workflows.</div>
+          </div>
+        </div>
+        <div class="proj-links" onclick="event.stopPropagation()">
+          <a href="#" class="proj-link" target="_blank">GitHub →</a>
+          <a href="#" class="proj-link" target="_blank">Demo →</a>
+        </div>
+      </div>
+
+      <div class="proj-card reveal" onclick="toggle(this)">
+        <div class="proj-head">
+          <div class="proj-num">05</div>
+          <div class="chevron">⌄</div>
+        </div>
+        <div class="proj-tags">
+          <span class="proj-tag">YOLOv8</span>
+          <span class="proj-tag">Ensemble</span>
+        </div>
+        <div class="proj-title">Pothole Detection</div>
+        <p class="proj-desc">YOLOv8m with one-stage vs two-stage comparison + severity classification.</p>
+        <div class="proj-detail">
+          <div class="proj-detail-inner">
+            <div class="proj-detail-label">How it works</div>
+            <div class="proj-detail-text">Built using YOLOv8m as a one-stage detector with comparative analysis against two-stage detectors. Ensemble methods combined for robust detection. Novel contribution: severity classification of detected potholes. Built as part of MTech chapter assessment.</div>
+          </div>
+        </div>
+        <div class="proj-links" onclick="event.stopPropagation()">
+          <a href="#" class="proj-link" target="_blank">GitHub →</a>
+          <a href="#" class="proj-link" target="_blank">Demo →</a>
+        </div>
+      </div>
+
+      <div class="proj-card reveal" onclick="toggle(this)">
+        <div class="proj-head">
+          <div class="proj-num">06</div>
+          <div class="chevron">⌄</div>
+        </div>
+        <div class="proj-tags">
+          <span class="proj-tag">Autoencoder</span>
+          <span class="proj-tag">Time Series</span>
+        </div>
+        <div class="proj-title">Anomaly Detection</div>
+        <p class="proj-desc">Time series anomaly detection using autoencoder reconstruction error.</p>
+        <div class="proj-detail">
+          <div class="proj-detail-inner">
+            <div class="proj-detail-label">How it works</div>
+            <div class="proj-detail-text">Autoencoder-based anomaly detection on time series data. Reconstruction error thresholding used for unsupervised anomaly flagging. Built with production-ready code structure as part of ML coursework.</div>
+          </div>
+        </div>
+        <div class="proj-links" onclick="event.stopPropagation()">
+          <a href="#" class="proj-link" target="_blank">GitHub →</a>
+          <a href="#" class="proj-link" target="_blank">Demo →</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <p class="label reveal">Skills</p>
+    <h2 class="big-title reveal">What I <em>work with.</em></h2>
+    <div class="skills-grid">
+
+      <div class="skill-card reveal">
+        <div class="skill-name">Languages</div>
+        <div class="tags">
+          <span class="tag">Python</span>
+          <span class="tag">SQL</span>
+          <span class="tag">HTML/CSS</span>
+        </div>
+      </div>
+
+      <div class="skill-card reveal">
+        <div class="skill-name">ML / DL Frameworks</div>
+        <div class="tags">
+          <span class="tag">TensorFlow</span>
+          <span class="tag">Keras</span>
+          <span class="tag">Scikit-learn</span>
+          <span class="tag">YOLOv8</span>
+        </div>
+      </div>
+
+      <div class="skill-card reveal">
+        <div class="skill-name">CV / NLP / GenAI</div>
+        <div class="tags">
+          <span class="tag">OpenCV</span>
+          <span class="tag">MediaPipe</span>
+          <span class="tag">LangChain</span>
+          <span class="tag">RAG</span>
+          <span class="tag">Word2Vec</span>
+          <span class="tag">Groq API</span>
+          <span class="tag">HuggingFace</span>
+        </div>
+      </div>
+
+      <div class="skill-card reveal">
+        <div class="skill-name">Data & Backend</div>
+        <div class="tags">
+          <span class="tag">Pandas</span>
+          <span class="tag">NumPy</span>
+          <span class="tag">Matplotlib</span>
+          <span class="tag">Seaborn</span>
+          <span class="tag">FastAPI</span>
+          <span class="tag">Streamlit</span>
+          <span class="tag">SQLite</span>
+          <span class="tag">REST APIs</span>
+        </div>
+      </div>
+
+      <div class="skill-card reveal">
+        <div class="skill-name">Concepts</div>
+        <div class="tags">
+          <span class="tag">Supervised</span>
+          <span class="tag">Unsupervised</span>
+          <span class="tag">Time Series</span>
+          <span class="tag">EDA</span>
+          <span class="tag">Feature Engineering</span>
+          <span class="tag">Hyperparameter Tuning</span>
+          <span class="tag">CTC</span>
+          <span class="tag">Anomaly Detection</span>
+          <span class="tag">Model Evaluation</span>
+        </div>
+      </div>
+
+      <div class="skill-card reveal">
+        <div class="skill-name">Tools</div>
+        <div class="tags">
+          <span class="tag">Git / GitHub</span>
+          <span class="tag">Google Colab</span>
+          <span class="tag">PyCharm</span>
+          <span class="tag">VS Code</span>
+          <span class="tag">Jupyter</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <p class="label reveal">Get in touch</p>
+    <h2 class="big-title reveal">Let's <em>talk.</em></h2>
+    <p class="reveal">joshiaarav09@gmail.com · +977 9865862038</p>
+    <div class="contact-links reveal">
+      <a href="mailto:joshiaarav09@gmail.com" class="contact-link">Email</a>
+      <a href="https://github.com/" target="_blank" class="contact-link">GitHub</a>
+      <a href="https://linkedin.com/in/" target="_blank" class="contact-link">LinkedIn</a>
+      <a href="#" class="contact-link">Resume</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <span>© 2025 Aarav Joshi</span>
+    <span>aaravjoshi.com.np</span>
+    <span>Lalitpur, Nepal</span>
+  </footer>
+
+  
+</body>
+<script src="script.js"></script>
+</html>
